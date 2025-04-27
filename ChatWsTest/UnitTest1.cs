@@ -17,18 +17,6 @@ namespace ChatWsTest
         [Test]
         public async Task Test1()
         {
-            //var wsClient = new WebsocketClient(new Uri("ws://localhost:8181"));
-            //wsClient.MessageReceived.Subscribe(msg =>
-            //{
-            //    Console.WriteLine("what we got from the server: "+msg.Text);
-            //});
-            //wsClient.Start();
-            //var message = new ClientWantsToEchoServerDto()
-            //{
-            //    messageContent = "hey"
-            //};
-            //wsClient.Send(JsonSerializer.Serialize(message));
-            //Task.Delay(5000).Wait();
             var ws = await new WebSocketTestClient().ConnectAsync();
             var ws2 = await new WebSocketTestClient().ConnectAsync();
 
